@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 1s;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+.header {
+    background-color: #ffebcd;
+    padding: 20px;
+    border-bottom: 2px solid #ffe4b5;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ff4500;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ff4500;
+}
+
+.content {
+    padding: 20px;
+    position: relative;
+    height: 400px; /* Mantiene la altura para evitar cambios bruscos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verse {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.verse p {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+}
+
+.verse img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: #ffebcd;
+    padding: 20px;
+    border-top: 2px solid #ffe4b5;
+}
+
+button {
+    background-color: #ff4500;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e03e00;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typewriter p {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typewriter 3s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
