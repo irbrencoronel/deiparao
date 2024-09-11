@@ -3,194 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💖</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mi amor</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1, h2 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 8vw;
+            letter-spacing: 0.5em; /* Separación de letras */
+        }
+
+        h1 span {
+            display: inline-block;
+            animation: flicker 1.5s infinite alternate; /* Animación de parpadeo de letras */
+        }
+
+        /* Encender las letras una por una */
+        h1 span:nth-child(1) { animation-delay: 0.1s; }
+        h1 span:nth-child(2) { animation-delay: 0.3s; }
+        h1 span:nth-child(3) { animation-delay: 0.5s; }
+        h1 span:nth-child(4) { animation-delay: 0.7s; }
+        h1 span:nth-child(5) { animation-delay: 0.9s; }
+        h1 span:nth-child(6) { animation-delay: 1.1s; }
+
+        h2 {
+            font-size: 2.5vw; /* Más pequeño */
+            font-weight: 300; /* Menos grueso */
+            color: #e6ff00; /* Amarillo neón */
+            text-shadow: 0 0 10px #e6ff00, 0 0 20px #e6ff00, 0 0 30px #e6ff00;
+            margin-top: 10px;
+        }
+
+        button {
+            font-size: 2.5vw;
+            padding: 15px 40px;
+            margin-top: 30px;
+            background-color: transparent;
+            border: 3px solid #e6ff00;
+            color: #e6ff00;
+            cursor: pointer;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            box-shadow: 0 0 20px #e6ff00, 0 0 40px #e6ff00;
+            transition: all 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #e6ff00;
+            color: #1a1a1a;
+            box-shadow: 0 0 30px #e6ff00, 0 0 60px #e6ff00;
+        }
+
+        @keyframes flicker {
+            0% { color: white; }
+            50% { color: #e6ff00; text-shadow: 0 0 10px #e6ff00, 0 0 20px #e6ff00, 0 0 30px #e6ff00; }
+            100% { color: white; }
+        }
+    </style>
 </head>
 <body>
-    <audio id="song">
-        <source src="audio.mp3" type="audio/mp3">
-        Tu navegador no soporta la etiqueta de audio.
-    </audio>
-    <div class="card">
-        <div class="header">
-            <h1>💖</h1>
-            <h2>De: I Para: O</h2>
-        </div>
-        <div class="content" id="content">
-            <div class="verse" id="verse0">
-                <p>🎵🎶🎵🎶</p>
-                <img src="https://media.giphy.com/media/26AHG5KGFxSkUWw1i/giphy.gif" alt="Music">
-            </div>
-            <div class="verse" id="verse1">
-                <p></p>
-                <img src="https://media.giphy.com/media/BKqOqscntEIrm/giphy.gif" alt="Gif1">
-            </div>
-            <div class="verse" id="verse2">
-                <p></p>
-                <img src="https://media.giphy.com/media/JXLHs90j6WktQ1Ydl6/giphy.gif" alt="Gif2">
-            </div>
-            <div class="verse" id="verse3">
-                <p></p>
-                <img src="https://media.giphy.com/media/sFbCkhl2sMv9x62OwY/giphy.gif" alt="Gif3">
-            </div>
-            <div class="verse" id="verse4">
-                <p></p>
-                <img src="https://media.giphy.com/media/QXJa2uAa44fYRSats0/giphy.gif" alt="Gif4">
-            </div>
-            <div class="verse" id="verse5">
-                <p></p>
-                <img src="https://media.giphy.com/media/wEM71wbHnFPTHa7FSt/giphy.gif" alt="Gif5">
-            </div>
-            <div class="verse" id="verse6">
-                <p></p>
-                <img src="https://media.giphy.com/media/WG4uYteu6J0teNVxpT/giphy.gif" alt="Gif6">
-            </div>
-            <div class="verse" id="verse7">
-                <p></p>
-                <img src="https://media.giphy.com/media/uqpK3SuxEY4W9YQvdg/giphy.gif" alt="Gif7">
-            </div>
-            <div class="verse" id="verse8">
-                <p></p>
-                <img src="https://media.giphy.com/media/Yle9Yz9izeVRyiwavn/giphy.gif" alt="Gif8">
-            </div>
-            <div class="verse" id="verse9">
-                <p></p>
-                <img src="https://media.giphy.com/media/ZOStzpF9H5syI/giphy.gif" alt="Gif9">
-            </div>
-            <div class="verse" id="verse10">
-                <p></p>
-                <img src="https://media.giphy.com/media/PFh8fnskEEka4/giphy.gif" alt="Gif10">
-            </div>
-            <div class="verse" id="verse11">
-                <p></p>
-                <img src="https://media.giphy.com/media/1427cjQy7kiBS8/giphy.gif" alt="Gif11">
-            </div>
-            <div class="verse" id="verse12">
-                <p></p>
-                <img src="https://media.giphy.com/media/M90mJvfWfd5mbUuULX/giphy.gif" alt="Gif12">
-            </div>
-            <div class="verse" id="verse13">
-                <p></p>
-                <img src="https://media.giphy.com/media/26FLdmIp6wJr91JAI/giphy.gif" alt="Gif13">
-            </div>
-            <div class="verse" id="verse14">
-                <p></p>
-                <img src="https://media.giphy.com/media/10tTOmhZzHMoW4/giphy.gif" alt="Gif14">
-            </div>
-            <div class="verse" id="verse15">
-                <p></p>
-                <img src="https://media.giphy.com/media/3o7TKoWXm3okO1kgHC/giphy.gif" alt="Gif15">
-            </div>
-            <div class="verse" id="verse16">
-                <p></p>
-                <img src="https://media.giphy.com/media/26gYBQdYIR4nnP2wA/giphy.gif" alt="Gif16">
-            </div>
-            <div class="verse" id="verse17">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oKIPj8bWmcHU8JtgY/giphy.gif" alt="Gif17">
-            </div>
-            <div class="verse" id="verse18">
-                <p></p>
-                <img src="https://media.giphy.com/media/3o7abGQa0ZQ2VOS0pK/giphy.gif" alt="Gif18">
-            </div>
-            <div class="verse" id="verse19">
-                <p></p>
-                <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="Gif19">
-            </div>
-            <div class="verse" id="verse20">
-                <p></p>
-                <img src="https://media.giphy.com/media/xT9IgBlcOenEhe5hzi/giphy.gif" alt="Gif20">
-            </div>
-            <div class="verse" id="verse21">
-                <p></p>
-                <img src="https://media.giphy.com/media/xT9IgEStLzJjgyTWD6/giphy.gif" alt="Gif21">
-            </div>
-            <div class="verse" id="verse22">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xyKNGCG7O8Hov6/giphy.gif" alt="Gif22">
-            </div>
-            <div class="verse" id="verse23">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oEjI80DSa1grNPTDq/giphy.gif" alt="Gif23">
-            </div>
-            <div class="verse" id="verse24">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oEjI9EdPXdwNCHvDi/giphy.gif" alt="Gif24">
-            </div>
-            <div class="verse" id="verse25">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oEjHXF5S3z4Uj9rc8/giphy.gif" alt="Gif25">
-            </div>
-            <div class="verse" id="verse26">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xzVJfhVpaZSC4o/giphy.gif" alt="Gif26">
-            </div>
-            <div class="verse" id="verse27">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y4rSzX1peAE07q/giphy.gif" alt="Gif27">
-            </div>
-            <div class="verse" id="verse28">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xILbP0ZL5Z4u24/giphy.gif" alt="Gif28">
-            </div>
-            <div class="verse" id="verse29">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xKDOWKAIUtHGNa/giphy.gif" alt="Gif29">
-            </div>
-            <div class="verse" id="verse30">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xz0z1WTnKGH7T6/giphy.gif" alt="Gif30">
-            </div>
-            <div class="verse" id="verse31">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y6GGWn7K0TRTA4/giphy.gif" alt="Gif31">
-            </div>
-            <div class="verse" id="verse32">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y35rPlbpqAvvHG/giphy.gif" alt="Gif32">
-            </div>
-            <div class="verse" id="verse33">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xvB9uRlN88fuRq/giphy.gif" alt="Gif33">
-            </div>
-            <div class="verse" id="verse34">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xHyDAOG6H8UgGk/giphy.gif" alt="Gif34">
-            </div>
-            <div class="verse" id="verse35">
-                <p></p>
-                <img src="https://media.giphy.com/media/3ohzdUbhEFMThsIEM8/giphy.gif" alt="Gif35">
-            </div>
-            <div class="verse" id="verse36">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y3Sz5SgXZVv44A/giphy.gif" alt="Gif36">
-            </div>
-            <div class="verse" id="verse37">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xvZBqHsQNYA9t6/giphy.gif" alt="Gif37">
-            </div>
-            <div class="verse" id="verse38">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y33LT1XN9JNZtm/giphy.gif" alt="Gif38">
-            </div>
-            <div class="verse" id="verse39">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8xSc0Dw8lm7dFTu/giphy.gif" alt="Gif39">
-            </div>
-            <div class="verse" id="verse40">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y4VfKPnljExNeE/giphy.gif" alt="Gif40">
-            </div>
-            <div class="verse" id="verse41">
-                <p></p>
-                <img src="https://media.giphy.com/media/3oz8y4VfKPnljExNeE/giphy.gif" alt="Gif41">
-            </div>
-        </div>
-        <div class="footer">
-            <button onclick="startAnimation()">Iniciar Animación</button>
-        </div>
+    <div>
+        <h1>
+            <span>M</span><span>I</span> <span>A</span><span>M</span><span>O</span><span>R</span>
+        </h1>
+        <h2>Te tengo un regalito</h2>
+        <button onclick="window.location.href='rosas.html'">Ver regalo☞💛</button>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
